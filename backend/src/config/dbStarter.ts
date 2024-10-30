@@ -5,9 +5,10 @@ config();
 
 
 const connectDB = async ():Promise<void> => {
-    const MONGO_URI = process.env.MONGO_URI ||"mongodb+srv://poorvithgowda10:BSnCuP8ml86578vr@cluster0.nmhwkjo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    const MONGO_URI = process.env.MONGO_URI || "";
 
     try {
+        console.log(MONGO_URI);
         await connect(MONGO_URI);
         console.log("Database connected!")
 

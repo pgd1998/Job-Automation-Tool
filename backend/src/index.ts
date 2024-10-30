@@ -2,12 +2,11 @@ import express from 'express';
 import router from './routes/jobRoutes';
 import connectDB from './config/dbStarter';
 
-
 connectDB();
 const app = express();
 app.use(express.json())
 app.use('/api/jobs', router);
-const port = 5000;
+const port = 3000;
 
 
 
